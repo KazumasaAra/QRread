@@ -31,7 +31,7 @@
   </div>
 </section>
 
-<script src="jsQR.min.js"></script>
+<script src="jsQR.js"></script>
 <script>
 const video  = $("#camera");     // === document.querySelector("#camera");
 const canvas = $("#picture");    // === document.querySelector("#picture");
@@ -44,7 +44,7 @@ window.onload = () => {
     video: {
       width: 300,
       height: 200,
-      facingMode: "user"   // フロントカメラを利用する
+      facingMode: { exact: "environment" }   // リアカメラを利用する
     }
   };
 
